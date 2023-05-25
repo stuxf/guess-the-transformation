@@ -1,0 +1,100 @@
+.menu {
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.menu a {
+  margin: 1rem 0;
+}
+
+/* posistion the .home-button class at the top right WITHIN the menu class*/
+.home-button {
+  position: absolute;
+  right: -0.5rem;
+  top: -0.5rem;
+}
+
+.clicked {
+  background-color: #f5f5f5 !important;
+}
+
+.game-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.game-bar div {
+  float: left;
+}
+.game-bar div:last-child {
+  float: right;
+  font-size: 2rem;
+  align-items: center;
+}
+/* viewport for smaller than 48rem */
+@media (max-width: 48rem) {
+  /* set max-width for body and center it */
+  .menu {
+    max-width: 20rem;
+  }
+
+  /* add spacing between buttons */
+  .menu a {
+    margin: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  .game-bar div:last-child {
+    font-size: 1.5rem;
+  }
+}
+
+/* desktop viewport */
+@media (min-width: 48rem) {
+  .menu {
+    max-width: 40rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  .home-button {
+    right: -0.75rem;
+    top: -0.75rem;
+  }
+}
+
+.transformation-matrix {
+  /* 3x3 grid */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  /* center the grid */
+  justify-items: center;
+  align-items: center;
+  /* text center */
+  text-align: center;
+}
+
+#game-subheader {
+  display: flex;
+  justify-content: space-between;
+}
+
+#score {
+  font-size: 3rem;
+}
+
+#game-over {
+  /* center text */
+  text-align: center;
+}
+
+#game-over > h2 {
+  color: red;
+  /* set to blinking animation */
+  animation: blink 0.5s infinite;
+}
